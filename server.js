@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 var pageThree={
-    heading:"This is page one",
-    content:"This is the text of page one"
+    heading:"This is page three",
+    content:"This is the text of page three"
 };
 function createTemplate(data){
             var heading= data.heading;
@@ -22,7 +22,7 @@ function createTemplate(data){
                             }
                             
                             body{
-                                background-color: blanchedalmond;
+                                background-color: #d1bde7;
                             }
                             
                             p{
