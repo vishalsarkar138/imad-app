@@ -9,12 +9,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/pageone', function (req, res) {
-  res.send('Page one will be presented here');
+app.get('/ui/pageone.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pageone.html'));
 });
 
-app.get('/pagetwo', function (req, res) {
-  res.send('Page two will be presented here');
+app.get('/ui/pagetwo.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pagetwo.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
