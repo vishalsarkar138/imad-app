@@ -6,18 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages ={
-    pageOne : {
+    'pageOne' : {
     heading:"This is page one",
     content:"This is the text of page one",
     bgclr:'b8ea96'
     },
-    pageTwo : {
+    'pageTwo' : {
     heading:"This is page two",
     content:"This is the text of page two",
     bgclr: '81abef'
     },
-
-    pageThree : {
+    'pageThree' : {
     heading:"This is page three",
     content:"This is the text of page three",
     bgclr:'d1bde7'
@@ -65,8 +64,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/pageone', function (req, res) {
-  res.send(createTemplate(pageOne));
+app.get('/:pageName', function (req, res) {
+  res.send(createTemplate(pages[pageName]));
 });
 
 app.get('/pagetwo', function (req, res) {
