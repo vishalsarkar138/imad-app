@@ -65,15 +65,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:pageName', function (req, res) {
+    var pageName = req.params.pageName;
   res.send(createTemplate(pages[pageName]));
 });
 
-app.get('/pagetwo', function (req, res) {
-  res.send(createTemplate(pageTwo));
-});
-app.get('/pagethree', function (req, res) {
-  res.send(createTemplate(pageThree));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
