@@ -8,13 +8,13 @@ app.use(morgan('combined'));
 var pageOne={
     heading:"This is page one",
     content:"This is the text of page three",
-    bgclr:'blanchedalmond'
+    bgclr:'b8ea96'
 };
 
 var pageTwo={
     heading:"This is page two",
     content:"This is the text of page three",
-    bgclr: 'aqua'
+    bgclr: '81abef'
     
 };
 
