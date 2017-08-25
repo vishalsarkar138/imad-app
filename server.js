@@ -6,17 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var pages ={
-    'pageOne' : {
+    'pageone' : {
     heading:"This is page one",
     content:"This is the text of page one",
     bgclr:'b8ea96'
     },
-    'pageTwo' : {
+    'pagetwo' : {
     heading:"This is page two",
     content:"This is the text of page two",
     bgclr: '81abef'
     },
-    'pageThree' : {
+    'pagethree' : {
     heading:"This is page three",
     content:"This is the text of page three",
     bgclr:'d1bde7'
