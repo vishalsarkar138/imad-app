@@ -5,24 +5,24 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var pages {
-    pageOne={
+var pages ={
+    pageOne : {
     heading:"This is page one",
     content:"This is the text of page one",
     bgclr:'b8ea96'
-};
-    pageTwo={
+    },
+    pageTwo : {
     heading:"This is page two",
     content:"This is the text of page two",
     bgclr: '81abef'
-    
-};
-    pageThree={
+    },
+
+    pageThree : {
     heading:"This is page three",
     content:"This is the text of page three",
     bgclr:'d1bde7'
+    }
 };
-}
 
 function createTemplate(data){
             var heading= data.heading;
