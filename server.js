@@ -5,10 +5,25 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var pageOne={
+    heading:"This is page one",
+    content:"This is the text of page three",
+    bgclr:blanchedalmond
+};
+
+var pageTwo={
+    heading:"This is page two",
+    content:"This is the text of page three",
+    bgclr: aqua
+    
+};
+
 var pageThree={
     heading:"This is page three",
-    content:"This is the text of page three"
+    content:"This is the text of page three",
+    bgclr:d1bde7
 };
+
 function createTemplate(data){
             var heading= data.heading;
             var content= data.content;
@@ -22,7 +37,7 @@ function createTemplate(data){
                             }
                             
                             body{
-                                background-color: #d1bde7;
+                                background-color: #${bgclr};
                             }
                             
                             p{
@@ -50,11 +65,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pageone', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pageone.html'));
+  res.send(createTemplate(pageOne));
 });
 
 app.get('/pagetwo', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pagetwo.html'));
+  res.send(createTemplate(pageTwo));
 });
 app.get('/pagethree', function (req, res) {
   res.send(createTemplate(pageThree));
