@@ -27,6 +27,7 @@ var pageThree={
 function createTemplate(data){
             var heading= data.heading;
             var content= data.content;
+            var bgclr= data.bgclr;
             var htmlTemplate=`<html>
                     <head>
                         <meta name="viewport" content="width=device-width, initial-scale=1"/>
